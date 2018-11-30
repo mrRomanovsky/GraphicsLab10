@@ -1,0 +1,58 @@
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe.config
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.pdb
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.dll
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.dll
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.dll
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.pdb
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.xml
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.pdb
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.xml
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.pdb
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.xml
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csprojResolveAssemblyReference.cache
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Form1.resources
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Properties.Resources.resources
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.GenerateResource.Cache
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.exe
+c:\users\anastasia\documents\visual studio 2015\Projects\GraphicsOpenGL\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.pdb
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe.config
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.pdb
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.dll
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.dll
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.dll
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.pdb
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.xml
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.pdb
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.xml
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.pdb
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.xml
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csprojAssemblyReference.cache
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Form1.resources
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Properties.Resources.resources
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.GenerateResource.cache
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.CopyComplete
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.exe
+C:\Users\Andrew\graphics\Graphics-master\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.pdb
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe.config
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.exe
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\GraphicsOpenGL.pdb
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.dll
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.dll
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.dll
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.pdb
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.xml
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.pdb
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.SceneGraph.xml
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.pdb
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\bin\Debug\SharpGL.WinForms.xml
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csprojAssemblyReference.cache
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Form1.resources
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.Properties.Resources.resources
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.GenerateResource.cache
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.csproj.CopyComplete
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.exe
+C:\Users\Andrew\graphics\Task10\GraphicsOpenGL\obj\Debug\GraphicsOpenGL.pdb
