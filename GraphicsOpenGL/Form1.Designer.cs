@@ -29,21 +29,13 @@
         private void InitializeComponent()
         {
             this.openGLControl1 = new SharpGL.OpenGLControl();
-            this.segmentButton = new System.Windows.Forms.Button();
-            this.TriangleButton = new System.Windows.Forms.Button();
-            this.QuadrangleButton = new System.Windows.Forms.Button();
-            this.PentagonButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.buttonBuild = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.checkBoxOrt = new System.Windows.Forms.CheckBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // openGLControl1
@@ -54,181 +46,99 @@
             this.openGLControl1.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl1.RenderContextType = SharpGL.RenderContextType.DIBSection;
             this.openGLControl1.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            this.openGLControl1.Size = new System.Drawing.Size(644, 509);
+            this.openGLControl1.Size = new System.Drawing.Size(715, 450);
             this.openGLControl1.TabIndex = 0;
             this.openGLControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.openGLControl1_KeyPress);
             this.openGLControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.openGLControl1_MouseClick);
             // 
-            // segmentButton
+            // buttonBuild
             // 
-            this.segmentButton.Location = new System.Drawing.Point(670, 19);
-            this.segmentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.segmentButton.Name = "segmentButton";
-            this.segmentButton.Size = new System.Drawing.Size(100, 30);
-            this.segmentButton.TabIndex = 1;
-            this.segmentButton.Text = "Отрезок";
-            this.segmentButton.UseVisualStyleBackColor = true;
-            this.segmentButton.Click += new System.EventHandler(this.segmentButtonClick);
+            this.buttonBuild.Location = new System.Drawing.Point(224, 526);
+            this.buttonBuild.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuild.Name = "buttonBuild";
+            this.buttonBuild.Size = new System.Drawing.Size(73, 32);
+            this.buttonBuild.TabIndex = 6;
+            this.buttonBuild.Text = "Построить";
+            this.buttonBuild.UseVisualStyleBackColor = true;
+            this.buttonBuild.Click += new System.EventHandler(this.buttonBuild_Click);
             // 
-            // TriangleButton
+            // listBox1
             // 
-            this.TriangleButton.Location = new System.Drawing.Point(670, 53);
-            this.TriangleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TriangleButton.Name = "TriangleButton";
-            this.TriangleButton.Size = new System.Drawing.Size(100, 30);
-            this.TriangleButton.TabIndex = 2;
-            this.TriangleButton.Text = "Треугольник";
-            this.TriangleButton.UseVisualStyleBackColor = true;
-            this.TriangleButton.Click += new System.EventHandler(this.triangleButtonClick);
+            this.listBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Отрезок",
+            "Треугольник",
+            "Четырехугольник",
+            "Многоугольник",
+            "Пьедестал"});
+            this.listBox1.Location = new System.Drawing.Point(75, 491);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(100, 69);
+            this.listBox1.TabIndex = 13;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // QuadrangleButton
+            // label1
             // 
-            this.QuadrangleButton.Location = new System.Drawing.Point(670, 106);
-            this.QuadrangleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.QuadrangleButton.Name = "QuadrangleButton";
-            this.QuadrangleButton.Size = new System.Drawing.Size(100, 32);
-            this.QuadrangleButton.TabIndex = 3;
-            this.QuadrangleButton.Text = "Четырехугольник";
-            this.QuadrangleButton.UseVisualStyleBackColor = true;
-            this.QuadrangleButton.Click += new System.EventHandler(this.quadrangleButtonClick);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(92, 475);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Примитивы";
             // 
-            // PentagonButton
+            // buttonClear
             // 
-            this.PentagonButton.Location = new System.Drawing.Point(670, 155);
-            this.PentagonButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.PentagonButton.Name = "PentagonButton";
-            this.PentagonButton.Size = new System.Drawing.Size(100, 32);
-            this.PentagonButton.TabIndex = 4;
-            this.PentagonButton.Text = "Многоугольник";
-            this.PentagonButton.UseVisualStyleBackColor = true;
-            this.PentagonButton.Click += new System.EventHandler(this.pentagonButtonClick);
+            this.buttonClear.Location = new System.Drawing.Point(317, 526);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(73, 32);
+            this.buttonClear.TabIndex = 17;
+            this.buttonClear.Text = "Очистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // checkBox1
+            // checkBoxOrt
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(689, 206);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(81, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Рисование";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxOrt.AutoSize = true;
+            this.checkBoxOrt.Location = new System.Drawing.Point(224, 488);
+            this.checkBoxOrt.Name = "checkBoxOrt";
+            this.checkBoxOrt.Size = new System.Drawing.Size(168, 17);
+            this.checkBoxOrt.TabIndex = 18;
+            this.checkBoxOrt.Text = "Ортографическая проекция";
+            this.checkBoxOrt.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // listBox2
             // 
-            this.button5.Location = new System.Drawing.Point(843, 170);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 32);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Построить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(670, 297);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(206, 32);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Вращение вокруг сцены";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(670, 239);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 32);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Пьедестал";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(670, 352);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(206, 32);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Вращение вокруг центрального куба";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(670, 405);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(206, 32);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Вращение вокруг своей оси";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(835, 206);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(118, 74);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Проекция";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(4, 48);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(116, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ортографическая";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(4, 26);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Перспективная";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.listBox2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "Вращение вокруг центральной фигуры",
+            "Вращение фигур вокруг своей оси",
+            "Вращение вокруг сцены"});
+            this.listBox2.Location = new System.Drawing.Point(455, 491);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(204, 43);
+            this.listBox2.TabIndex = 19;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 509);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.PentagonButton);
-            this.Controls.Add(this.QuadrangleButton);
-            this.Controls.Add(this.TriangleButton);
-            this.Controls.Add(this.segmentButton);
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(724, 563);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.checkBoxOrt);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.buttonBuild);
             this.Controls.Add(this.openGLControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Лабораторная 10";
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,19 +147,12 @@
         #endregion
 
         private SharpGL.OpenGLControl openGLControl1;
-        private System.Windows.Forms.Button segmentButton;
-        private System.Windows.Forms.Button TriangleButton;
-        private System.Windows.Forms.Button QuadrangleButton;
-        private System.Windows.Forms.Button PentagonButton;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button buttonBuild;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.CheckBox checkBoxOrt;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

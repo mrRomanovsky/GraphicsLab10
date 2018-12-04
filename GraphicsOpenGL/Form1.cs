@@ -71,11 +71,7 @@ namespace GraphicsOpenGL
             BuildFigure(new List<PointF>() { new PointF(-2 + shift , 0), new PointF(0, 2 + shift), new PointF(2 + shift, 0) });
             gl.End();
             openGLControl1.Focus();
-        }
-
-        private void triangleButtonClick(object sender, EventArgs e) =>
-            BuildTriangle();
-
+        } 
         private void BuildSegment()
         {
             PrepareToDraw();
@@ -86,10 +82,7 @@ namespace GraphicsOpenGL
 
             gl.End();
             openGLControl1.Focus();
-        }
-
-        private void segmentButtonClick(object sender, EventArgs e) => BuildSegment();
-
+        } 
         private void BuildQuadrangle()
         {
             var shift = new Random().Next(2, 7);
@@ -99,10 +92,7 @@ namespace GraphicsOpenGL
             BuildFigure(new List<PointF>() { new PointF(-shift, -shift), new PointF(-shift, shift), new PointF(shift, shift), new PointF(shift, -shift) });
             gl.End();
             openGLControl1.Focus();
-        }
-
-        private void quadrangleButtonClick(object sender, EventArgs e) => BuildQuadrangle();
-
+        } 
         private void BuildPentagon()
         {
             PrepareToDraw();
@@ -112,9 +102,6 @@ namespace GraphicsOpenGL
             gl.End();
             openGLControl1.Focus();
         }
-
-        private void pentagonButtonClick(object sender, EventArgs e) => BuildPentagon();
-        
 
         private void openGLControl1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -135,47 +122,6 @@ namespace GraphicsOpenGL
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (button5.Text == "Построить")
-            {
-                rotation = 0;
-                gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
-                gl.MatrixMode(OpenGL.GL_PROJECTION);
-                gl.PushMatrix();
-                gl.LoadIdentity();
-                gl.Ortho2D(0, openGLControl1.Width, openGLControl1.Height, 0);
-                gl.Begin(OpenGL.GL_POLYGON);
-                for (int i = 0; i < points_for_drawing.Count; i++)
-                {
-                    switch (i % 3)
-                    {
-                        case 0:
-                            gl.Color(0f, 0f, 1f);
-                            break;
-                        case 1:
-                            gl.Color(0f, 1f, 0f);
-                            break;
-                        case 2:
-                            gl.Color(1f, 0f, 0f);
-                            break;
-                    }
-
-                    gl.Vertex(points_for_drawing[i].Key, points_for_drawing[i].Value);
-                }
-                gl.End();
-                gl.PopMatrix();
-                button5.Text = "Очистить";
-            }
-            else
-            {
-
-                gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
-                points_for_drawing.Clear();
-                button5.Text = "Построить";
-            }
-            openGLControl1.Focus();
-        }
 
 
         private void RotateFigure(double rotationDiff)
@@ -268,62 +214,38 @@ namespace GraphicsOpenGL
 
 
 
-        private void button7_Click(object sender, EventArgs e)
+   
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
-            gl.MatrixMode(OpenGL.GL_PROJECTION);
-            gl.LoadIdentity(); 
-            if (radioButton1.Checked)
-                gl.Perspective(45.0f, openGLControl1.Width / openGLControl1.Height, 0.1f, 100.0f);
-            else
-                gl.Ortho(-8, 8, -8, 8, 0.1, 100);
-            
-
-            gl.MatrixMode(OpenGL.GL_MODELVIEW);
-
-            double angle = Math.PI / 18;
-            double rad = 4;
-            for (int i = 0; i < 100; i++)
+            switch (listBox1.SelectedIndex)
             {
-                _pause(100);
-                gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
-
-                gl.Color(0.8f, 0.498039f, 0.196078f);
-
-                gl.LoadIdentity();
-                gl.Translate(0.0f, 0.3f, -20.0f);
-                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
-                gl.Scale(1.5, 1.5, 0);
-                Cube();
-
-                gl.Color((float)0.207, (float)0.194, (float)0.194);
-                gl.MatrixMode(OpenGL.GL_MODELVIEW);
-                gl.LoadIdentity();
-                gl.Translate(-3f, 0.0f, -20.0f);
-                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
-                gl.Scale(1.25, 1.25, 0);
-                Cube();
-
-                gl.Color(0.5f, 0.35f, 0.05f);
-                gl.MatrixMode(OpenGL.GL_MODELVIEW);
-                gl.LoadIdentity();
-                gl.Translate(3.0f, -0.2f, -20.0f);
-                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
-                Cube();
-
-                angle += Math.PI / 18;
+                case 0:
+                    BuildSegment();
+                    break;
+                case 1:
+                    BuildTriangle();
+                    break;
+                case 2:
+                    BuildQuadrangle();
+                    break;
+                case 3:
+                    BuildPentagon();
+                    break;
+                case 4:
+                    BuildPostament();
+                    break;
+                default:
+                    break;
             }
-
-
-            openGLControl1.Focus();
         }
-        
-        private void button6_Click(object sender, EventArgs e)
+
+        private void BuildPostament()
         {
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.MatrixMode(OpenGL.GL_PROJECTION);
             gl.LoadIdentity();
-            if (radioButton1.Checked)
+            if(checkBoxOrt.Checked)
                 gl.Perspective(45.0f, openGLControl1.Width / openGLControl1.Height, 0.1f, 100.0f);
             else
                 gl.Ortho(-8, 8, -8, 8, 0.1, 100);
@@ -341,7 +263,7 @@ namespace GraphicsOpenGL
 
             gl.MatrixMode(OpenGL.GL_MODELVIEW);
             gl.LoadIdentity();
-            gl.Translate(-0.5f , 0.0f, -18.0f);
+            gl.Translate(-0.5f, 0.0f, -18.0f);
             gl.Scale(1.25, 1.25, 0);
             Cube();
 
@@ -351,14 +273,89 @@ namespace GraphicsOpenGL
             gl.LoadIdentity();
             gl.Translate(4.5f, -0.2f, -20.0f);
             Cube();
+        } 
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        bool isClear = true;
+        private void buttonBuild_Click(object sender, EventArgs e)
+        {
+            if (isClear)
+            {
+                rotation = 0;
+                gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+                gl.MatrixMode(OpenGL.GL_PROJECTION);
+                gl.PushMatrix();
+                gl.LoadIdentity();
+                gl.Ortho2D(0, openGLControl1.Width, openGLControl1.Height, 0);
+                gl.Begin(OpenGL.GL_POLYGON);
+                for (int i = 0; i < points_for_drawing.Count; i++)
+                {
+                    switch (i % 3)
+                    {
+                        case 0:
+                            gl.Color(0f, 0f, 1f);
+                            break;
+                        case 1:
+                            gl.Color(0f, 1f, 0f);
+                            break;
+                        case 2:
+                            gl.Color(1f, 0f, 0f);
+                            break;
+                    }
+
+                    gl.Vertex(points_for_drawing[i].Key, points_for_drawing[i].Value);
+                }
+                gl.End();
+                gl.PopMatrix();
+                isClear = false;
+            }
+            openGLControl1.Focus();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+
+            gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+            points_for_drawing.Clear();
+            isClear = true;
+            openGLControl1.Focus();
+        }
+
+        private void listBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            switch (listBox2.SelectedIndex)
+            {
+                case 0:
+                    RotationAroundCentralFigure();
+                    break;
+                case 1:
+                    SpinAround();
+                    break;
+                case 2:
+                    RotationArounScene();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+
+        private void RotationAroundCentralFigure()
         {
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.MatrixMode(OpenGL.GL_PROJECTION);
-            gl.LoadIdentity(); 
-            if (radioButton1.Checked)
+            gl.LoadIdentity();
+            if (checkBoxOrt.Checked)
                 gl.Perspective(45.0f, openGLControl1.Width / openGLControl1.Height, 0.1f, 100.0f);
             else
                 gl.Ortho(-8, 8, -8, 8, 0.1, 100);
@@ -404,13 +401,13 @@ namespace GraphicsOpenGL
             openGLControl1.Focus();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void SpinAround()
         {
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
-        
+
             gl.MatrixMode(OpenGL.GL_PROJECTION);
             gl.LoadIdentity();
-            if (radioButton1.Checked)
+            if (checkBoxOrt.Checked)
                 gl.Perspective(45.0f, openGLControl1.Width / openGLControl1.Height, 0.1f, 100.0f);
             else
                 gl.Ortho(-8, 8, -8, 8, 0.1, 100);
@@ -453,6 +450,61 @@ namespace GraphicsOpenGL
 
 
             openGLControl1.Focus();
+        }
+
+        private void RotationArounScene()
+        {
+            gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+            gl.MatrixMode(OpenGL.GL_PROJECTION);
+            gl.LoadIdentity();
+            if (checkBoxOrt.Checked)
+                gl.Perspective(45.0f, openGLControl1.Width / openGLControl1.Height, 0.1f, 100.0f);
+            else
+                gl.Ortho(-8, 8, -8, 8, 0.1, 100);
+
+
+            gl.MatrixMode(OpenGL.GL_MODELVIEW);
+
+            double angle = Math.PI / 18;
+            double rad = 4;
+            for (int i = 0; i < 100; i++)
+            {
+                _pause(100);
+                gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+
+                gl.Color(0.8f, 0.498039f, 0.196078f);
+
+                gl.LoadIdentity();
+                gl.Translate(0.0f, 0.3f, -20.0f);
+                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
+                gl.Scale(1.5, 1.5, 0);
+                Cube();
+
+                gl.Color((float)0.207, (float)0.194, (float)0.194);
+                gl.MatrixMode(OpenGL.GL_MODELVIEW);
+                gl.LoadIdentity();
+                gl.Translate(-3f, 0.0f, -20.0f);
+                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
+                gl.Scale(1.25, 1.25, 0);
+                Cube();
+
+                gl.Color(0.5f, 0.35f, 0.05f);
+                gl.MatrixMode(OpenGL.GL_MODELVIEW);
+                gl.LoadIdentity();
+                gl.Translate(3.0f, -0.2f, -20.0f);
+                gl.Translate(rad * Math.Cos(angle), 0, rad * Math.Sin(angle));
+                Cube();
+
+                angle += Math.PI / 18;
+            }
+
+
+            openGLControl1.Focus();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
